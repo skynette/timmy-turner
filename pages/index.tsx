@@ -78,7 +78,7 @@ const Home: NextPage = () => {
     };
 
     return (
-        <main className="h-screen w-full text-white bg-gray-950 flex justify-center items-center">
+        <main className="h-screen w-full flex justify-center items-center">
             <div className="bg-gray-800 rounded-lg p-8 w-[80%]">
                 {!isContractMetadataLoading && (
                     <div className="flex items-center space-x-5">

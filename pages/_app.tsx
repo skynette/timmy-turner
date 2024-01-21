@@ -7,7 +7,7 @@ import Navbar from "../components/navbar";
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain =Sepolia;
+const activeChain = Sepolia;
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -16,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             activeChain={activeChain}
         >
             <Navbar />
-            <Component {...pageProps} />
+            <div className="bg-gray-950 text-white h-screen">
+                <Component {...pageProps} />
+            </div>
         </ThirdwebProvider>
     );
 }
