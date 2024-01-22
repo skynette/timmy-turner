@@ -26,10 +26,10 @@ const ProfilePage = () => {
                     </div>
                     <hr />
                     <div className="mt-4">
-                        <h3 className="text-3xl font-semibold mb-4">My NFTs</h3>
-                        <div className="">
+                        <h3 className="text-3xl text-center md:text-left font-semibold mb-4">My NFTs</h3>
+                        <div className="flex justify-center md:justify-normal">
                             {!isOwnedNFTsLoading ? (
-                                <div className="grid grid-cols-3 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                     {
                                         ownedNFTs && ownedNFTs?.length > 0 ? (
                                             ownedNFTs?.map((nft) => (
@@ -38,8 +38,8 @@ const ProfilePage = () => {
                                                         height="250px"
                                                         metadata={nft.metadata}
                                                     />
-                                                    <h3 className="px-4 pb-2 text-xl font-bold">#{nft.metadata.name}</h3>
-                                                    <h3 className="px-4 pb-2 text-sm">{nft.metadata.description}</h3>
+                                                    <h3 className="px-4 pb-2 pt-2 md:pt-0 text-xl font-bold">#{nft.metadata.name}</h3>
+                                                    <h3 className="px-4 pb-2 text-sm max-w-[300px]">{nft.metadata.description}</h3>
                                                 </div>
                                             ))
                                         ) : (

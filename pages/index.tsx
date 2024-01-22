@@ -78,10 +78,10 @@ const Home: NextPage = () => {
     };
 
     return (
-        <main className="h-screen w-full flex justify-center items-center">
+        <main className="py-10 flex justify-center items-center">
             <div className="bg-gray-800 rounded-lg p-8 w-[80%]">
                 {!isContractMetadataLoading && (
-                    <div className="flex items-center space-x-5">
+                    <div className="flex flex-col space-y-5 md:flex-row items-center space-x-5">
                         <div className="rounded-lg w-fit">
                             {/* image here */}
                             <MediaRenderer
@@ -91,7 +91,7 @@ const Home: NextPage = () => {
                         </div>
 
                         {/* title of contract */}
-                        <div className="flex flex-col space-y-4 max-w-[60%]">
+                        <div className="flex flex-col space-y-4 md:max-w-[60%]">
                             <h1 className="text-3xl font-bold">{contractMetadata?.name}</h1>
                             <p className="text-wrap">{contractMetadata?.description}</p>
                             {

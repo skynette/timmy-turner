@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             activeChain={activeChain}
         >
             <Navbar />
-            <div className="bg-gray-950 text-white h-screen">
+            <div className="bg-gray-950 text-white h-full">
                 <Component {...pageProps} />
             </div>
         </ThirdwebProvider>
